@@ -8,12 +8,17 @@ class Categoria(models.Model):
     def __unicode__(self):
         return self.titulo
 
+
 class Enlace(models.Model):
+    def image_path(self, filename):
+        ruta = "%s/%s/%s" % (self.categoria, self.titulo, str(filename))
+        return ruta
     titulo = models.CharField(max_length=140)
     enlace = models.URLField()
     votos = models.IntegerField(default=0)
     categoria = models.ForeignKey(Categoria)
     usuario = models.ForeignKey(User)
+    img_enlace = models.ImageField(upload_to=image_path)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):

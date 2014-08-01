@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'linkeo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.db'),
     }
 }
 
@@ -77,6 +77,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace('\\', '/')
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates').replace('\\', '/'), )
 
@@ -92,4 +94,3 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'linkeando.context_processors.menu',
 
 )
-

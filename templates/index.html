@@ -27,9 +27,8 @@
         {% for enlace in enlaces %}
             <div class="row jumbotron" >
                 <div class="col-xs-4 col-sm-4">
-                <figure class="img-responsivek">
-                   {# rellenar campo img#}
-                    <img width="200px" src="http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2014/07/rubik-cube-798x310.jpg"
+                <figure class="img-responsive">
+                    <img width="200px" src="{{ MEDIA_URL }}{{ enlace.img_enlace}}"
                          class="img-circle img-responsive" alt="Responsive image"/>
                 </figure>
                 </div>

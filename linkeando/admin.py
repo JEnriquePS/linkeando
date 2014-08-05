@@ -27,6 +27,7 @@ class EnlaceInLine(admin.StackedInline):
 class CategotiaAdmin(admin.ModelAdmin):
     inlines = [EnlaceInLine]
 
+
 class AgregadorAdmin(admin.ModelAdmin):
     filter_horizontal = ('enlace',)
 

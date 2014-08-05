@@ -1,8 +1,8 @@
 # -*- coding: utf-8 *-*
-__author__ = 'jenriqueps'
+
 from django import forms
 from django.forms import ModelForm
-from models import *
+from models import Enlace
 
 
 class EnlaceForm(ModelForm):

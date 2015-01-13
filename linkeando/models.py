@@ -9,11 +9,12 @@ class Categoria(models.Model):
         return self.titulo
 
 
-class Enlace(models.Model):
-    def image_path(self, filename):
+def image_path(self, filename):
         ruta = "{0}/{1}/{2}".format(self.categoria, self.titulo, str(filename))
         return ruta
 
+
+class Enlace(models.Model):
     titulo = models.CharField(max_length=140)
     enlace = models.URLField()
     votos = models.IntegerField(default=0)

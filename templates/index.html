@@ -69,14 +69,14 @@
             {% get_comment_form for enlace as form_post%}
             <form action="{% comment_form_target %}" method="post">
     {% csrf_token %}
-    <p>Nombre:
-    {{ form_post.name }}
+    <p>
+    {{ form_post.name| bootstrap }}
     </p>
-    <p>Email:
-    {{ form_post.email }}
+    <p>
+    {{ form_post.email|bootstrap }}
     </p>
-    <p>Comentario:
-    {{ form_post.comment }}
+    <p>
+    {{ form_post.comment|bootstrap }}
     </p>
     {{ form_post.honeypot }}
     {{ form_post.content_type }}
@@ -84,7 +84,7 @@
     {{ form_post.timestamp }}
     {{ form_post.security_hash }}
     <input type="hidden" name="next" value="/" />
-    <input type="submit" name="submit" value="Post">
+    <input class="btn btn-primary" type="submit" name="submit" value="comentar">
   </form>
             <!-- {% get_comment_form for enlace as form_post %}
 

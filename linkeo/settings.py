@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'bootstrapform',
-    'django_comments',
-    'linkeando',
+    'apps.django_comments',
+    'apps.linkeando',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'linkeo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.db'),
+        'NAME': os.path.join(BASE_DIR, 'db.db2'),
     }
 }
 
@@ -92,8 +92,8 @@ STATICFILES_DIRS = (
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
-    'linkeando.context_processors.ejemplo',
-    'linkeando.context_processors.menu',
+    'apps.linkeando.context_processors.ejemplo',
+    'apps.linkeando.context_processors.menu',
 
 )
 

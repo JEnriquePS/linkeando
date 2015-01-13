@@ -1,3 +1,6 @@
 #id_honeypot {
     display: none;
 }
+#id_comment {
+    resize: none;
+}

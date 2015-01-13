@@ -2,4 +2,7 @@
 .sqlite3
 *.pyc
 *.db
-linkeando/migrations
+apps/linkeando/migrations
+db.db2
+apps/django_comments/migrations
+media

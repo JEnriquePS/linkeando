@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response, get_object_or_404, render
 
 from .models import Categoria, Enlace, Agregador
 from .forms import EnlaceForm
-from django_comments.views.comments import post_comment
+# from django_comments.views.comments import post_comment
 
 
 def home(request):
